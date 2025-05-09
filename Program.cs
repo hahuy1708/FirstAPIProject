@@ -1,4 +1,5 @@
-using Microsoft.OpenApi.Models;
+using FirstAPIProject.Repository;
+using Microsoft.OpenApi.Models; 
 
 namespace FirstAPIProject
 {
@@ -9,6 +10,9 @@ namespace FirstAPIProject
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
+            
+            // Register the EmployeeRepository for Dependency Injection
+            builder.Services.AddSingleton<IEmployeeRepository, EmployeeRepository>();
 
             builder.Services.AddControllers();  // Registers MVC controllers with the dependency injection (DI) container.
 
