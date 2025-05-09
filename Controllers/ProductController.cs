@@ -71,7 +71,6 @@ namespace FirstAPIProject.Controllers
             
             return NoContent();  // HTTP status code 204
         }
-        
     }
 }
 

@@ -3,19 +3,21 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace FirstAPIProject.Controllers
 {
-    [Route("api/[controller]/[action]")]
     [ApiController]
     public class EmployeeController : ControllerBase
     {
+        [Route("Employee/All")]
         [HttpGet]
-        public string Get()
-        {
-            return "Returning from EmployeeController GET Method";
+        public string GetAll()
+        {   
+            return "Response from GetAll Method";
         }
+        
+        [Route("Employee/ByID/{id}")]
         [HttpGet]
-        public string GetEmployee()
+        public string GetEmployeeByID(int id)
         {
-            return "Returning from EmployeeController GETEMPLOYEE Method";
+            return $"Response from GetEmployeeById Method Id: {id}";
         }
     }
 }
