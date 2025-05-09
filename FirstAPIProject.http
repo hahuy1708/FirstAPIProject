@@ -1,6 +1,37 @@
-@FirstAPIProject_HostAddress = http://localhost:5278
-
-GET {{FirstAPIProject_HostAddress}}/weatherforecast/
+@FirstAPIProject_HostAddress = https://localhost:7080
+### Get All Products
+GET {{FirstAPIProject_HostAddress}}/api/product
 Accept: application/json
+###
 
+### Get Product with ID 1
+GET {{FirstAPIProject_HostAddress}}/api/product/1
+Accept: application/json
+###
+
+### Create a New Product
+POST {{FirstAPIProject_HostAddress}}/api/product
+Content-Type: application/json
+
+{
+    "Name": "New Product",
+    "Price": 39.99,
+    "Category": "Books"
+}
+###
+
+### Update Product with ID 1
+PUT {{FirstAPIProject_HostAddress}}/api/product/1
+Content-Type: application/json
+
+{
+    "Id": 1,
+    "Name": "Updated Product",
+    "Price": 49.99,
+    "Category": "Electronics"
+}
+###
+
+### Delete Product with ID 1
+DELETE {{FirstAPIProject_HostAddress}}/api/products/1
 ###

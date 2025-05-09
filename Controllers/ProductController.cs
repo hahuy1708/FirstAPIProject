@@ -53,7 +53,7 @@ namespace FirstAPIProject.Controllers
             
             // In a real application, persist changes to the database here 
             
-            return NoContent();
+            return NoContent();  // HTTP status code 204
         }
         
         //Delete: api/products/{id}
@@ -69,7 +69,7 @@ namespace FirstAPIProject.Controllers
             
             // In a real application, remove the product from the database here
             
-            return NoContent();
+            return NoContent();  // HTTP status code 204
         }
         
     }
